@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eleonora & Francesco - 30.09.2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Dancing Script -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<!--  Great Vibes -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      color: #5a4a42;
+    }
+    p {
+        font-size: 1.5em;
+    }
+    .header-bg {
+      background: url('img/img1.jpeg') no-repeat center/cover;
+      padding: 10em 0 18em 0;
+      /*border-bottom: 10px solid #f9e3d2;*/
+      /*border-bottom: 10px solid #fef0cd;*/
+      position: relative;
+    }
+    .header-bg::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; right: 0; bottom: 0;
+      background: rgba(255,255,255,0.7);
+    }
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+    .watercolor {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100px;
+      /*background: url('https://pngimg.com/uploads/watercolor/watercolor_PNG187.png') no-repeat left top/contain;*/
+      opacity: 0.2;
+      pointer-events: none;
+    }
+    .title {
+      font-family: 'Dancing Script', serif;
+      font-size: 4.5rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+    .datesub {
+      font-family: 'Dancing Script', serif;
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.5rem;
+      color: #c97f5a;
+    }
+    .section-bg {
+        position: relative;
+        padding: 40px 0;
+        z-index: 1;
+    }
+    .section-bg::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('img/sfondo4.png') no-repeat center center fixed;
+        background-size: cover;
+        opacity: 0.4; /* ← solo l'immagine è trasparente */
+        z-index: -1;
+    }
+    .quote {
+      /*background-color: rgba(249,227,210,0.8);*/
+      font-style: italic;
+      font-size: 2.2rem;
+      padding: 30px 0;
+      color: #fffefe;
+      font-family: 'Dancing Script', cursive;
+      /*border-top: 2px dashed #8c6e5a;
+      border-bottom: 2px dashed #8c6e5a;*/
+      background: url('img/tramonto.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .luogocerimonia {
+        background: url('img/struttura.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .listanozze{
+        background: url('img/giappone.png') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .countdown {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #c97f5a;
+      margin: 20px 0;
+    }
+    .form-section {
+      background: rgba(249,227,210,0.8);
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 40px;
+    }
+    .card-img-top {
+      height: 30em;
+      object-fit: cover;
+    }
+    .map-responsive {
+      overflow: hidden;
+      padding-bottom: 30em;
+      position: relative;
+      height: 0;
+    }
+    .map-responsive iframe {
+      left: 0;
+      top: 0;
+      /*height: 100%;*/
+      height:30em;
+      width: 100%;
+      position: absolute;
+      border: 0;
+    }
+    .font-corsivo-dance {
+        font-family: 'Dancing Script', cursive;
+    }
+    .font-25{
+        font-size: 2.5rem;
+    }
+    /* oppure per Great Vibes */
+    .font-corsivo-vibes {
+        font-family: 'Great Vibes', cursive;
+    }
+    .outer-frame {
+      background-color: #e3bc99; /* beige */
+      padding: 20px;
+      display: inline-block;
+    }
+
+    .inner-frame {
+      background-color: #ffffff; /* bianco */
+      padding: 10px;
+    }
+
+    .image-style {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+
+    @media (max-width: 767px) {
+      .title { font-size: 2rem; }
+      .subtitle { font-size: 1.5rem; }
+      .datesub { font-size: 1.1rem; }
+      p { font-size: 0.7rem; }
+      .form-section { padding: 15px; }
+      .font-25{ font-size: 1.5rem; }
+    }
+  </style>
+  <!-- Google Fonts for demo -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header-bg text-center position-relative">
+    <div class="watercolor"></div>
+    <div class="header-content">
+      <div class="subtitle mb-1">Ci sposiamo!</div>
+      <div class="title mb-2">Eleonora &amp; Francesco</div>
+      <div class="datesub mb-3">30 Settembre 2025</div>
+      <i class="subtitle bi bi-heart-fill"></i>
+
+      <!--<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=400&h=300&q=80" 
+      alt="Eleonora e Francesco" class="rounded shadow" 
+      style="width:220px; height:220px; object-fit:cover; border:6px solid #fff;">-->
+    </div>
+  </div>
+
+  <!-- Presentazione -->
+  <section class="section-bg text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="outer-frame">
+                    <div class="inner-frame">
+                        <img src="img/img5_2.png" alt="Coppia" class="image-style">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 mt-5">
+                <h2 class="subtitle mb-3">Benvenuti!</h2>
+                <p>
+                    Siamo emozionati di vivere questo giorno speciale circondati dall'affetto delle persone a noi più care.<br>
+                    In questa pagina troverete tutte le informazioni utili per partecipare al nostro matrimonio.<br>
+                    Non vediamo l’ora di condividere con voi ogni istante di questa giornata indimenticabile!<br>
+                    
+                    <span class="font-corsivo-dance" style="font-size: 1.3em;">Eleonora & Francesco</span>
+                </p>
+            </div>
+    </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Luoghi della cerimonia -->
+  <section class="py-5 section-bg luogocerimonia">
+    <div class="container py-5">
+      <div class="row g-4 mb-4">
+        <div class="col-md-12">
+          <div class="card shadow-sm" style="background: rgba(249,227,210,0.8)">
+            <!--<img src="img/struttura.jpg" class="card-img-top" alt="San Tommaso">-->
+            <div class="card-body text-center">
+              <h2 class="subtitle mb-4">Luogo del Matrimonio</h2>
+              <h4 class="card-title">Ore 12:00</h4>
+              <p class="card-text"><b><span class="font-corsivo-dance font-25">San Tommaso Ricevimenti</span></b> <br> 
+                C.da Bagiolaro, sn - S.P. Polignano-Conversano km1
+                <br>Polignano a Mare (BA) </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-12">
+                  <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.7484748862767!2d17.187745976291236!3d40.9869882207352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1347cbde83b6f139%3A0xf9855c8348aa1b6b!2sSan%20Tommaso%20Ricevimenti%20%26%20Hotel!5e0!3m2!1sit!2sit!4v1749038112023!5m2!1sit!2sit"></iframe>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Dettagli -->
+  <!--<section class="section-bg">
+    <div class="container">
+      <h2 class="subtitle mb-4 text-center">Dettagli</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Preparativi">
+            <div class="card-body">
+              <h5 class="card-title">Preparativi</h5>
+              <p class="card-text">Vi aspettiamo in chiesa dalle ore 15:30 per accogliervi e iniziare insieme questa giornata speciale.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Cerimonia">
+            <div class="card-body">
+              <h5 class="card-title">Cerimonia</h5>
+              <p class="card-text">La cerimonia religiosa si terrà alle 16:00 presso la Chiesa di San Michele, seguita dal ricevimento a Villa Le Rose.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Spostamenti">
+            <div class="card-body">
+              <h5 class="card-title">Spostamenti</h5>
+              <p class="card-text">Un servizio navetta sarà disponibile tra la chiesa e la villa per agevolare gli spostamenti degli ospiti.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>-->
+
+  <!-- Lista di Nozze -->
+  <section class="py-5 section-bg listanozze">
+    <div class="container py-5">
+        <div class="card shadow-sm" style="background: rgba(249,227,210,0.8)">
+            <!--<img src="img/struttura.jpg" class="card-img-top" alt="San Tommaso">-->
+            <div class="card-body py-5 ps-5 pe-5 text-center">
+                <h2 class="subtitle mb-4 ">Lista di Nozze</h2>
+                <div class="row align-items-center">
+                  <div class="col-md-12">
+                      <p>
+                          <strong>Il nostro sogno si chiama Giappone!</strong><br>
+                          Per la nostra luna di miele desideriamo vivere un’esperienza indimenticabile tra cultura, natura e tradizione. <br>
+                          Se vorrete contribuire a realizzare questo viaggio speciale, potrete farlo con un pensiero verso la nostra lista viaggio.<br>
+                          IBAN: IT00A0000000000000000000000<br>
+                          Causale: “Viaggio di nozze Eleonora e Francesco”
+                        </p>
+                        
+                  </div>
+                </div>
+            </div>
+          </div>
+      
+    </div>
+  </section>
+
+  <!-- Countdown & RSVP -->
+  <section class="section-bg"  style="background:#e9d6bd;">
+    <div class="container text-center">
+      <h2 class="subtitle mb-3">Conferma la tua presenza</h2>
+      <p>Non vediamo l’ora di festeggiare con voi!</p>
+      <div class="countdown" id="countdown"></div>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+         <!-- <form class="form-section shadow" id="rsvpForm">
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome e Cognome</label>
+              <input type="text" class="form-control" id="nome" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="presenza" class="form-label">Parteciperai?</label>
+              <select class="form-select" id="presenza" required>
+                <option value="">Seleziona</option>
+                <option value="Sì">Sì, con piacere!</option>
+                <option value="No">Purtroppo no</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="note" class="form-label">Note (allergie, intolleranze, ecc.)</label>
+              <textarea class="form-control" id="note" rows="2"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Invia Conferma</button>
+          </form>-->
+          <div class="container py-5">
+            <div class="card shadow-sm" style="background: rgba(249,227,210,0.8)">
+                <!--<img src="img/struttura.jpg" class="card-img-top" alt="San Tommaso">-->
+                <div class="card-body py-5 ps-5 pe-5 text-center">
+                    <div class="row align-items-center">
+                      <div class="col-md-12">
+                          <p>
+                                email@email.com<br>
+                              Eleonora: 3333333333<br>
+                              Francesco: 3333333333<br>
+                            </p>
+                            
+                      </div>
+                    </div>
+                </div>
+              </div>
+          
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Citazione -->
+  <div class="text-center quote">
+    <div class="py-5">
+    “L'amore è come il vento. Non lo vedo, ma lo percepisco.”<br>
+    <span style="font-size:0.7em;">I passi dell'amore</span><br>
+    <u>DA CAMBIARE!!!!</u>
+</div>
+  </div>
+
+  <footer class="section-bg text-center py-2" style="background:rgba(249,227,210,0.8); font-size:1.3em;">
+    <small>© Eleonora & Francesco 2025</small>
+  </footer>
+
+  <script>
+    // Countdown
+    function updateCountdown() {
+      const eventDate = new Date('2025-09-30T12:00:00');
+      const now = new Date();
+      let diff = eventDate - now;
+      if (diff < 0) diff = 0;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+      document.getElementById('countdown').innerHTML =
+        `<span>${days}</span> giorni <span>${hours}</span> ore <span>${mins}</span> min <span>${secs}</span> sec`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // RSVP Form (demo, no backend)
+    /*document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Grazie per la conferma!');
+      this.reset();
+    });*/
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
